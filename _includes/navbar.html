@@ -13,6 +13,16 @@
       <a href="{{ site.swc_site }}" class="pull-left">
         <img class="navbar-logo" src="{{ page.root }}/assets/img/swc-icon-blue.svg" alt="Software Carpentry logo" />
       </a>
+      <a href="{{ site.nlesc_site }}" class="pull-left">
+        <img class="navbar-logo" src="{{ page.root }}/assets/img/escience-logo-cyanblack.png" alt="eScience Center logo" />
+      </a>
+      <a href="{{ site.dtl_site }}" class="pull-left">
+        <img class="navbar-logo" src="{{ page.root }}/assets/img/DTL_short.png" alt="DTL logo" />
+      </a>
+      <a href="{{ site.surfsara_site }}" class="pull-left">
+        <img class="navbar-logo" src="{{ page.root }}/assets/img/surfsara.png" alt="DTL logo" />
+      </a>
+
       {% elsif page.carpentry == "dc" %}
       <a href="{{ site.dc_site }}" class="pull-left">
         <img class="navbar-logo" src="{{ page.root }}/assets/img/dc-icon-black.svg" alt="Data Carpentry logo" />
@@ -34,10 +44,10 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
 
-	{% comment %} Always show code of conduct. {% endcomment %}
+    {% comment %} Always show code of conduct. {% endcomment %}
         <li><a href="{{ page.root }}/conduct/">Code of Conduct</a></li>
 
-	{% comment %} Show setup instructions, reference guide, and lesson episodes for lessons. {% endcomment %}
+    {% comment %} Show setup instructions, reference guide, and lesson episodes for lessons. {% endcomment %}
         {% if site.kind == "lesson" %}
         <li><a href="{{ page.root }}/setup/">Setup</a></li>
         <li><a href="{{ page.root }}/reference/">Reference</a></li>
@@ -49,10 +59,10 @@
             {% endfor %}
           </ul>
         </li>
-	{% endif %}
+    {% endif %}
 
-	{% comment %} Show extras for lessons or if this is the main workshop-template repo (where they contain documentation). {% endcomment %}
-	{% if site.kind == "lesson" or site.github.repository_name == "workshop-template" %}
+    {% comment %} Show extras for lessons or if this is the main workshop-template repo (where they contain documentation). {% endcomment %}
+    {% if site.kind == "lesson" or site.github.repository_name == "workshop-template" %}
         <li class="dropdown">
           <a href="{{ page.root }}/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Extras <span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -61,9 +71,9 @@
             {% endfor %}
           </ul>
         </li>
-	{% endif %}
+    {% endif %}
 
-	{% comment %} Always show license. {% endcomment %}
+    {% comment %} Always show license. {% endcomment %}
         <li><a href="{{ page.root }}/license/">License</a></li>
       </ul>
       <form class="navbar-form navbar-right" role="search" id="search" onsubmit="google_search(); return false;">
